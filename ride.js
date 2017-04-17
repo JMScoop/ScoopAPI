@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 let RideSchema = new Schema({
   departs: {
     type: Date,
-    required: 'You must specify your departure time.'
+    required: 'You must specify your departure date.'
   },
   origin: {
     type: String,
@@ -17,44 +17,37 @@ let RideSchema = new Schema({
   notes: String,
   seats_open : {
     type: Number,
-    min: 0
+    // min: 0
   },
   passengers: [{
-    id: {
-      type: String,
-      required: true
-    },
+
     first_name: {
       type: String,
-      required: true
+      // required: true
     },
     last_name: {
       type: String,
-      required: true
+      // required: true
     }
   }],
   driver: {
-    id: {
-      type: String,
-      required: true
-    },
     first_name: {
       type: String,
-      required: true
+      // required: true
     },
     last_name: {
       type: String,
-      required: true
+      // required: true
     },
     car: {
       seats: {
         type: Number,
-        required: true,
+        // required: true,
         min: 1
       },
       description: {
         type: String,
-        required: true
+        // required: true
       }
     }
   }
